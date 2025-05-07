@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basteln – Verónica Paola Höft 101</title>
+  <title>Galerie</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
@@ -13,7 +13,7 @@
       height: 100%;
       overflow: hidden;
       font-family: 'Poppins', sans-serif;
-      background-color: #7f7f7f;
+      background-color: #232323;
     }
 
     .center-button {
@@ -128,7 +128,7 @@
 
     .button {
       padding: 12px 25px;
-      background-color: #4A4A4A;
+      background-color: #e9e2e2;
       color: white;
       font-size: 16px;
       border-radius: 8px;
@@ -144,7 +144,7 @@
 <body>
 
   <nav class="fixed top-0 w-full bg-black bg-opacity-60 backdrop-blur-md text-white p-4 z-50 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-bold">Verónica Paola Höft 101</a>
+    <a href="index.html" class="text-xl font-bold">Verónica Höft</a>
     <button id="menu-button" class="menu-button">
       <span class="bar bg-white h-0.5 block mb-1"></span>
       <span class="bar bg-white h-0.5 block"></span>
@@ -158,20 +158,29 @@
     </ul>
   </div>
 
-  <div class="center-button">
-    <button id="openGalleryBtn" class="button">Zur Galerie</button>
-    <button onclick="window.location.href='index.html'" class="button">Zurück zur Hauptseite</button>
+
+  <div class="flex flex-col justify-center items-center gap-4 min-h-screen px-4 text-center">
+    <button id="openGalleryBtn"
+      class="bg-transparent text-white border border-white/50 hover:border-white hover:bg-transparent px-6 py-3 sm:px-8 sm:py-3 text-base sm:text-lg rounded-full cursor-pointer leading-relaxed sm:leading-7 w-full sm:w-auto max-w-md">
+      Zur Galerie
+    </button>
+  
+    <a href="Mainpage.html"
+      class="bg-transparent text-white border border-white/50 hover:border-white hover:bg-transparent px-6 py-3 sm:px-8 sm:py-3 text-base sm:text-lg rounded-full cursor-pointer leading-relaxed sm:leading-7 w-full sm:w-auto max-w-md">
+      Zurück
+    </a>
   </div>
+  
+  
 
   <div class="gallery-images">
     <img src="Blau_1.jpg" alt="Bild 1" />
     <img src="Blau_2.jpg" alt="Bild 2" />
     <img src="Blau_3.jpg" alt="Bild 3" />
     <img src="Blau_4.jpg" alt="Bild 4" />
-    <img src="DSC_1.JPG" alt="Bild 6" />
-    <img src="DSC_2.JPG" alt="Bild 7" />
     <img src="DSC_3.JPG" alt="Bild 8" />
-    <img src="DSC_5.JPG" alt="Bild 9" />
+    <img src="DSC_1.JPG" alt="Bild 6" />
+    <img src="DSC_4.JPG" alt="Bild 9" />
     <img src="DSC_6.JPG" alt="Bild 10" />
     <img src="4x_Orange.jpg" alt="Bild 11" />
     <img src="4x_Blau.jpg" alt="Bild 12" />
@@ -189,7 +198,7 @@
   </div>
 
   <footer>
-    <p>© 2025 Verónica Paola Höft. Alle Rechte vorbehalten.</p>
+    <p>© 2025 Verónica Höft. Alle Rechte vorbehalten.</p>
     <div>
       <a href="datenschutz.html" class="hover:text-gray-300 transition">Datenschutz</a>
       <a href="impressum.html" class="hover:text-gray-300 transition">Impressum</a>
@@ -264,6 +273,14 @@
       if (touchStartX - touchEndX > 50) nextImage();
       else if (touchEndX - touchStartX > 50) prevImage();
     });
+
+
+
+
+
+
+
+
   </script>
 
 </body>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenslauf - Aziza Aziz</title>
+    <title>Lebenslauf</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="description" content="Biografie von Verónica Höft - Künstlerin aus Chile.">
+    <meta name="description" content="Biografie von  - Künstlerin aus Chile.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -13,6 +13,7 @@
             margin: 0;
             background-color: #2A2E35;
             color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
         }
 
         #galaxyCanvas {
@@ -156,6 +157,22 @@
             object-fit: cover;
         }
 
+
+        
+footer {
+    padding: 12px 20px; /* Kleinere Abstände */
+    font-size: 14px; /* Kleinere Schrift */
+}
+
+footer .flex a {
+    font-size: 14px; /* Schriftgröße für Links im Footer */
+    color: white;
+}
+
+footer .flex a:hover {
+    color: #FFD700; /* Hover-Effekt */
+}
+
     </style>
 </head>
 <body>
@@ -163,7 +180,7 @@
     <canvas id="galaxyCanvas"></canvas>
 
     <nav class="fixed top-0 w-full bg-black bg-opacity-80 backdrop-blur-md text-white p-4 z-50 flex justify-between items-center">
-        <a href="" class="text-xl font-bold">Verónica Höft 101</a>
+        <a href="" class="text-xl font-bold">Verónica Höft</a>
         <button id="menu-btn" class="menu-button">
             <div></div>
             <div></div>
@@ -234,18 +251,21 @@
 
     <div class="modal" id="modal">
         <div class="modal-content text-white">
-            <h2 class="text-2xl font-semibold">Mehr über Aziza Aziz</h2>
+            <h2 class="text-2xl font-semibold">Ausstellungen</h2>
             <p class="mt-4">
-                <strong>Biografischer Kontext</strong><br>
-                Aziza Aziz ist eine vielseitige Künstlerin mit einem tiefen Engagement in der Kunstpädagogik und -vermittlung. Ihr Werk spiegelt eine starke Verbindung zu ihrer chilenischen Herkunft wider und ist durch lebendige Farben und kreative Ausdrucksformen geprägt.
+                <strong>Informationen folgen</strong><br>
             </p>
             <button class="close-modal mt-4 px-6 py-3 bg-white text-black rounded-full">Schließen</button>
         </div>
     </div>
 
-    <footer class="fixed bottom-0 left-0 w-full bg-black bg-opacity-50 backdrop-blur-md text-white py-4 text-center text-sm">
+
+    
+
+
+    <footer class="fixed bottom-0 left-0 w-full bg-black bg-opacity-50 backdrop-blur-md text-white py-3 text-center text-sm">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <p class="mb-2 md:mb-0">© 2025 Aziza Aziz. Alle Rechte vorbehalten.</p>
+            <p class="mb-2 md:mb-0">© 2025 Verónica Paola Höft. Alle Rechte vorbehalten.</p>
             <div class="flex space-x-6">
                 <a href="datenschutz.html" class="hover:text-gray-300 transition">Datenschutz</a>
                 <a href="impressum.html" class="hover:text-gray-300 transition">Impressum</a>
@@ -253,7 +273,7 @@
             </div>
         </div>
     </footer>
-    
+
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
