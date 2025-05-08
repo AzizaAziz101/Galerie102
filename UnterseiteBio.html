@@ -13,7 +13,6 @@
 
 
     <style>
-
         body {
             margin: 0;
             background-color: #2A2E35;
@@ -30,6 +29,13 @@
             z-index: -1;
             pointer-events: none;
         }
+
+
+
+
+
+
+
 
 
 /* Menü Button */
@@ -144,14 +150,17 @@ footer .flex a:hover {
     background-position: center; /* Das Bild wird zentriert */
     background-attachment: fixed; /* Das Bild bleibt beim Scrollen fixiert */
     color: white; /* Damit der Text lesbar ist */
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 
-        .heading {
+
+
+
+.heading {
             margin-top: 30vh;
             text-align: center;
             font-family: 'Qwigley', cursive, sans-serif;
@@ -179,18 +188,13 @@ footer .flex a:hover {
 </head>
 <body>
     
+
+   
     
-    <div class="background-div">
-        <h1 class="heading">Verónica Höft</h1>
-        <h2 class="subheading">Kunst aus Bad Kreuznach</h2>
-
-    </div>
-
-    <canvas id="galaxyCanvas"></canvas>
 
 
         <nav class="fixed top-0 w-full bg-black bg-opacity-60 backdrop-blur-md text-white p-4 z-50 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold">Verónica Höft</a>
+            <a href="Index123.html" class="text-xl font-bold">Verónica Höft</a>
         
             <!-- Menü Button für Mobile -->
             <button id="menu-button" class="menu-button">
@@ -204,26 +208,60 @@ footer .flex a:hover {
 <div id="menu-overlay" class="menu-overlay">
     <ul class="menu-list">
         <li><a href="Galerie111.html">Galerie</a></li>
-        <li><a href="Bio.html">Biografie</a></li>
+        <li><a href="UnterseiteBio.html">Biografie</a></li>
     </ul>
 </div>
 
 
 
-<footer class="fixed bottom-0 left-0 w-full bg-black bg-opacity-50 backdrop-blur-md text-white py-3 text-center text-sm">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-        <p class="mb-2 md:mb-0">© 2025 Verónica Paola Höft. Alle Rechte vorbehalten.</p>
-        <div class="flex space-x-6">
-            <a href="datenschutz.html" class="hover:text-gray-300 transition">Datenschutz</a>
-            <a href="impressum.html" class="hover:text-gray-300 transition">Impressum</a>
-            <a href="kontakt.html" class="hover:text-gray-300 transition">Kontakt</a>
-        </div>
+<div class="relative flex justify-start items-center h-screen p-8 mt-0" style="margin-top: 180px;">
+    <div class="max-w-2xl mx-auto text-center">
+        <h1 class="text-3xl font-semibold text-white">Biografie von Verónica Höft</h1>
+
+        <p class="mt-3 text-base text-white leading-relaxed">
+            <strong>1967</strong> in Chile geboren<br>
+            <strong>Ausbildung:</strong><br>
+            1991: Abschluss des Studiums Kunst für Lehramt an der Universität Concepción, Chile, mit Auszeichnung als beste Absolventin des Jahrgangs.<br><br>
+
+            <strong>Aktivitäten:</strong><br>
+            1990-1991: Assistentin der Fächer Malerei II, Zeichnung II und Produktgestaltung an der Fakultät für Kunst an der Universität Concepción.<br>
+            1991-1992: Kunstprojekt für Kinder „Talleres poblacionales de plástica infantil“ der Kulturabteilung des regionalen Regierungsbezirks, Concepción, Chile.<br>
+            1992-1993: Kunstlehrerin am Gymnasium „Kingston College“, Concepción, Chile.<br>
+            1994: Übersiedlung nach Deutschland, Rheinland-Pfalz.<br>
+            1995: Heirat mit Michael Höft.<br>
+            1995-1996: Deutsch als Fremdsprache an der Johannes Gutenberg-Universität in Mainz für den Hochschulzugang ausländischer Studienbewerber.<br><br>
+
+            <strong>Gruppenausstellungen:</strong><br>
+            1990: „Fec 90“ im chilenische-britischen Institut Concepción, Chile.<br>
+            1991: Wandmalerei “El arte vive en talcahuano“, unter der Leitung des Künstlers Julio Escámez, Talcahuano, Chile.<br>
+            1992: „Diálogo I“ Chilenisch-Französische Institut, Concepción, Chile.<br>
+            1993: „La corneta de fin de siglo” Kunstgalerie der Universität Concepción, Concepción, Chile.<br><br>
+
+            <strong>Weitere Ausstellungen und Aktivitäten:</strong><br>
+            Zahlreiche Atelier-Ausstellungen (ca. zwei jährlich) seit 2006.<br>
+            Seit 2019 Ehrenamtliche Arbeit als Beisitzer in der Künstlerbahnhof Ebernburg e.V., Verein zur Förderung von Kunst und Kultur.<br>
+        </p>
+
+        <br>
+        <br>
+
+       
     </div>
-</footer>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
 
 <script>
+
 
 window.onload = function() {
             if (document.fonts) {
@@ -249,40 +287,23 @@ document.getElementById("menu-button").addEventListener("click", function() {
 
 
 
-const canvas = document.getElementById("galaxyCanvas");
-const ctx = canvas.getContext("2d");
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    drawBackground();
-    drawStars();
-}
-
-function drawBackground() {
-    const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0, 
-        canvas.width / 2, canvas.height / 2, canvas.width * 0.6
-    );
-
-    gradient.addColorStop(0, "rgba(227, 242, 253, 0)");
-    gradient.addColorStop(0.000001, "rgba(210, 235, 255, 0.1)");
-    gradient.addColorStop(0.000005, "rgba(220, 240, 240, 0.4)");
-    gradient.addColorStop(1, "#EEEEEE");
-
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
-
-
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
-
 
 
 </script>
 
 
+
+    <footer class="fixed bottom-0 left-0 w-full bg-black bg-opacity-50 backdrop-blur-md text-white py-3 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <p class="mb-2 md:mb-0">© 2025 Verónica Paola Höft. Alle Rechte vorbehalten.</p>
+            <div class="flex space-x-6">
+                <a href="datenschutz.html" class="hover:text-gray-300 transition">Datenschutz</a>
+                <a href="impressum.html" class="hover:text-gray-300 transition">Impressum</a>
+                <a href="kontakt.html" class="hover:text-gray-300 transition">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+    
 
 </body>
 </html>
