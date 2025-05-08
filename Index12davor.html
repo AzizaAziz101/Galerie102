@@ -136,51 +136,43 @@ footer .flex a:hover {
         }
 
 
-
         .background-div {
-    position: relative;
     width: 100%;
-    height: 100dvh;
-    background-image: url('Mainfirstpage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
+    height: 700px; /* Setze eine feste Höhe für das div */
+    background-image: url('Mainfirstpage.jpg'); /* Dein Bild */
+    background-size: cover; /* Bild wird so skaliert, dass es den div vollständig abdeckt */
+    background-position: center; /* Das Bild wird zentriert */
+    background-attachment: fixed; /* Das Bild bleibt beim Scrollen fixiert */
+    color: white; /* Damit der Text lesbar ist */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 80px;
-    
-    filter: brightness(0.6) contrast(0.9); /* Heller & weniger Kontrast */
 }
 
-.heading {
-    font-family: 'Qwigley', cursive, sans-serif;
-    font-size: 7rem;
-    font-weight: normal;
-    color: #242623;
-    line-height: 1.1;
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: opacity 1.1s ease-in-out;
-    transition-delay: 0.3s;
-    margin-top: 9rem; /* Etwas weiter unten */
-    margin-bottom: 0;
-}
 
-.subheading {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.5rem;
-    font-weight: normal;
-    color: #242623;
-    opacity: 0;
-    transition: opacity 1.1s ease-in-out;
-    transition-delay: 0.7s;
-    margin-top: 0,5rem;
-}
+        .heading {
+            margin-top: 30vh;
+            text-align: center;
+            font-family: 'Qwigley', cursive, sans-serif;
+            font-size: 7rem;
+            font-weight: normal;
+            line-height: 1.1;
+            letter-spacing: 2px;
+            opacity: 0; /* Unsichtbar */
+            transition: opacity 1.1s ease-in-out; /* Übergang für das Einblenden */
+            transition-delay: 0.3s; /* Verzögerung von 2 Sekunden */
+        }
 
+        .subheading {
+            font-family: 'Roboto Slab', serif; /* Schriftart für h2 */
+            font-size: 2.5rem; /* Größe für das h2 */
+            font-weight: normal;
+            margin-top: 47vh;
+            opacity: 0; /* Unsichtbar */
+            transition: opacity 1.1s ease-in-out;
+            transition-delay: 0.7s; /* Verzögerung */
+        }
 
 
     </style>
@@ -198,7 +190,7 @@ footer .flex a:hover {
 
 
         <nav class="fixed top-0 w-full bg-black bg-opacity-60 backdrop-blur-md text-white p-4 z-50 flex justify-between items-center">
-            <a href="Index123.html" class="text-xl font-bold">Verónica Höft</a>
+            <a href="index.html" class="text-xl font-bold">Verónica Höft</a>
         
             <!-- Menü Button für Mobile -->
             <button id="menu-button" class="menu-button">
@@ -212,7 +204,7 @@ footer .flex a:hover {
 <div id="menu-overlay" class="menu-overlay">
     <ul class="menu-list">
         <li><a href="Galerie111.html">Galerie</a></li>
-        <li><a href="UnterseiteBio.html">Biografie</a></li>
+        <li><a href="Bio.html">Biografie</a></li>
     </ul>
 </div>
 
