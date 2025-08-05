@@ -264,6 +264,55 @@ footer .flex a:hover {
     .button:hover {
       background-color: #3A3A3A;
     }
+
+
+
+
+
+
+
+
+    /* Mobile Anpassung für Bild + Beschreibung */
+@media (max-width: 768px) {
+  .modal-content.has-description {
+    position: relative;
+    flex-direction: column; /* Fallback falls kein Overlay greift */
+  }
+
+  .modal-content.has-description img {
+    width: 100%;
+    max-height: 80vh; /* Bild groß anzeigen */
+    object-fit: contain;
+  }
+
+  .modal-content.has-description .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Halbtransparentes Overlay */
+    padding: 12px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    max-height: 40%;
+    overflow-y: auto; /* Scrollbar bei langen Texten */
+  }
+}
+
+/* Extra kleine Geräte (<480px) → Buttons kleiner machen */
+@media (max-width: 480px) {
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+}
+
   </style>
 </head>
 <body>
@@ -319,8 +368,8 @@ footer .flex a:hover {
     <img src="Blau_4.jpg" alt="Bild 4" />
     <img src="DSC_3.JPG" alt="Bild 8" />
     <img src="DSC_1.JPG" alt="Bild 6" />
-    <img src="DSC_4.JPG" alt="Bild 9" />
-    <img src="DSC_6.JPG" alt="Bild 10" />
+    <img src="DSC_6.JPG" alt="Bild 9" />
+    <img src="DSC_4.JPG" alt="Bild 10" />
     <img src="4x_Orange.jpg" alt="Bild 11" />
     <img src="4x_Blau.jpg" alt="Bild 12" />
   </div>

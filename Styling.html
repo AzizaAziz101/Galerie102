@@ -14,34 +14,6 @@
         h1, h2, h3 {
             font-family: 'Roboto Slab', serif;
         }
-
-            /* Hamburger Animation */
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #4B3F3A;
-      border-radius: 1px;
-      transition: all 0.3s ease;
-    }
-    .hamburger.open span:nth-child(1) {
-      transform: rotate(45deg) translate(4px, 4px);
-    }
-    .hamburger.open span:nth-child(2) {
-      transform: rotate(-45deg) translate(4px, -4px);
-    }
-
-        /* Slide-in Animation */
-    @keyframes slideIn {
-      from { transform: translateX(-100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes slideOut {
-      from { transform: translateX(0); opacity: 1; }
-      to { transform: translateX(-100%); opacity: 0; }
-    }
-    .slide-in { animation: slideIn 0.3s ease forwards; }
-    .slide-out { animation: slideOut 0.3s ease forwards; }
     </style>
 </head>
 <body class="bg-[#4a4946] text-[#fefcfb] pb-24">
@@ -49,39 +21,19 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 flex justify-between items-center h-[60px] px-5 bg-[rgba(100,90,80,0.6)] text-[#fefcfb] backdrop-blur">
         <a href="index.html" class="text-xl font-bold">Verónica Höft</a>
-        
-        <!-- Desktop Links -->
-<div class="hidden md:flex gap-6 text-lg font-medium">
-  <a href="Biografie.html">Biografie</a>
-  <a href="Galerie508.html">Galerie</a>
-  <a href="Austellungen.html">Ausstellungen</a>
-</div>
+        <button id="menu-button" class="flex flex-col justify-between w-[30px] h-[20px] cursor-pointer" aria-label="Menü öffnen">
+            <span class="bg-[#fefcfb] h-[3px] w-full transition-all"></span>
+            <span class="bg-[#fefcfb] h-[3px] w-full transition-all"></span>
+        </button>
+    </nav>
 
-        <!-- Mobile Hamburger mit 2 Linien -->
-      <button id="menu-btn" 
-              class="hamburger md:hidden flex flex-col gap-2 ml-4 focus:outline-none relative z-10">
-        <span></span>
-        <span></span>
-      </button>
+    <!-- Menü Overlay -->
+    <div id="menu-overlay" class="fixed top-[60px] left-0 right-0 w-full h-[30%] bg-[rgba(210,190,160,0.25)] backdrop-blur transform translate-x-full opacity-0 pointer-events-none transition-all duration-500 z-[1000] flex flex-col justify-start pt-[45px]" aria-hidden="true">
+        <ul class="text-center">
+            <li class="py-2"><a href="Galerie111.html" class="text-[18px] hover:text-[#f0e3d1]">Galerie</a></li>
+            <li class="py-2"><a href="UnterseiteBio.html" class="text-[18px] hover:text-[#f0e3d1]">Biografie</a></li>
+        </ul>
     </div>
-  </div>
-    </nav>
-
-      
-
-<!-- Mobile Menü Overlay -->
-<div id="mobile-menu" class="fixed inset-0 bg-black text-black bg-opacity-50 hidden z-50">
-  <div id="menu-panel" class="bg-white w-64 h-full p-6 shadow-lg">
-    <!-- Menu Links -->
-    <nav class="flex flex-col gap-4 font-medium text-lg mt-10">
-      <a href="Biografie.html" class="hover:text-[#F7AFAE]">Biografie</a>
-      <a href="Galerie508.html" class="hover:text-[#F7AFAE]">Galerie</a>
-      <a href="Austellungen.html" class="hover:text-[#F7AFAE]">Austellungen</a>
-    </nav>
-  </div>
-</div>
-
-
 
     <!-- Titel -->
     <h1 class="text-center text-4xl sm:text-5xl font-semibold mt-28 sm:mt-24 mb-4">
@@ -126,40 +78,15 @@
     
     <!-- JavaScript für Menü -->
     <script>
-         const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuPanel = document.getElementById('menu-panel');
-
-  menuBtn.addEventListener('click', () => {
-    const isOpen = menuBtn.classList.toggle('open');
-
-    if (isOpen) {
-      mobileMenu.classList.remove('hidden');
-      menuPanel.classList.remove('slide-out');
-      menuPanel.classList.add('slide-in');
-    } else {
-      menuPanel.classList.remove('slide-in');
-      menuPanel.classList.add('slide-out');
-      mobileMenu.classList.add('hidden');
-      
-    }
-  });
-
-  // Close menu when clicking outside panel
-  mobileMenu.addEventListener('click', (e) => {
-    if (e.target === mobileMenu) {
-      menuBtn.classList.remove('open');
-      menuPanel.classList.remove('slide-in');
-      menuPanel.classList.add('slide-out');
-        mobileMenu.classList.add('hidden');
-      
-    }
-  });
-
-        
+        document.getElementById('menu-button').addEventListener('click', function () {
+            const menuOverlay = document.getElementById('menu-overlay');
+            menuOverlay.classList.toggle('translate-x-0');
+            menuOverlay.classList.toggle('translate-x-full');
+            menuOverlay.classList.toggle('opacity-0');
+            menuOverlay.classList.toggle('pointer-events-none');
+            const isActive = menuOverlay.classList.contains('translate-x-0');
+            menuOverlay.setAttribute('aria-hidden', !isActive);
+        });
     </script>
 </body>
 </html>
-
-
-
